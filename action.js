@@ -391,3 +391,4 @@ function scrollPengumuman(direction) {
 
     container.style.transform = `translateX(${-pengumumanIndex * cardWidth}px)`;
 }
+
