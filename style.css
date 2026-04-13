@@ -4867,4 +4867,52 @@ HEADER MOBILE MENU
     }
 }
 
+/* =========================
+REMOVE LARGE SPACES BETWEEN SECTIONS
+========================= */
+
+/* Kill forced full-screen height */
+section {
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    margin: 0 !important;
+}
+
+/* Remove big empty gaps from specific sections if any */
+.sec,
+.perkhidmatan-section,
+.pengumuman-section,
+.borang-section,
+.peta-section {
+    margin: 0 !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+}
+
+/* Remove extra spacing from headings */
+h1, h2, h3 {
+    margin-top: 0 !important;
+}
+
+/* Fix spacing caused by parallax/hero sections */
+section::before,
+section::after {
+    display: none !important;
+}
+
+/* Remove hidden spacing from containers */
+.container,
+.wrapper,
+.content {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Prevent accidental extra space */
+body {
+    line-height: normal;
+}
+
 
