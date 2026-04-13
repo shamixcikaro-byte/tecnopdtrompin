@@ -135,18 +135,13 @@ img {
 }
 
 /* The Section Body... Set it to max size of screen */
-section,
-.sec,
-.perkhidmatan-section,
-.pengumuman-section,
-.peta-section,
-.faq-section {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* To blend section color with water color */
@@ -284,9 +279,12 @@ section {
 
 /* Properties for middle section (below water) */
 .sec {
+    position: relative;
     background: #f5f7fa;
     color: #003549;
+    padding: 10px 20px;
     z-index: 50;
+    overflow: hidden;
 }
 .visi-misi-section{
     padding: 80px 20px;
@@ -954,9 +952,12 @@ section {
 /* PERKHIDMATAN PAGE */
 
 .perkhidmatan-section {
-    
+    width: 100%;
+    min-height: 130vh;
+    margin: 0;
+    padding: 60px 0 40px;
     background: #ffffff;
-
+    display: block;
 }
 
 .perkhidmatan-container {
@@ -1242,7 +1243,9 @@ transform:rotate(180deg);
 }
 
 .pengumuman-section {
+    width: 100%;
     background: #f5f7fa;
+    padding: 70px 20px;
     overflow: hidden;   /* IMPORTANT */
 }
 
@@ -4072,9 +4075,14 @@ transform:rotate(180deg);
 
 /* ========================= MAP SECTION IMPROVEMENT ========================= */ 
 .peta-section {
+    width: 100%;
+    min-height: 150vh;
     background: #f5f7fa;
     padding: 120px 40px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .peta-container {
@@ -4325,6 +4333,9 @@ transform:rotate(180deg);
 ========================= */
 
 .faq-section{
+    width: 100%;
+    min-height: 200vh;
+    padding: 100px 20px;
     background: linear-gradient(180deg, #eef3f8, #dfe9f1);
 }
 
@@ -4622,67 +4633,5 @@ main {
     from { transform: scale(0.7); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
-
-/* HAMBURGER NAVIGATION */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.8em;
-  color: white;
-  cursor: pointer;
-  z-index: 100000; /* above everything */
-}
-
-#nav-menu {
-  display: flex;
-}
-
-@media screen and (max-width: 768px) {
-  /* Adjust header for mobile */
-  #header {
-    padding: 1em 2em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  /* Hide nav menu initially */
-  #nav-menu {
-    display: none;
-    flex-direction: column;
-    background: rgba(0,53,73,0.95);
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 220px;
-    padding: 20px;
-    border-radius: 8px;
-  }
-
-  /* Show when active */
-  #nav-menu.active {
-    display: flex;
-  }
-
-  /* Hamburger visible on mobile */
-  .hamburger {
-    display: block;
-  }
-
-  /* Section padding for mobile */
-  section,
-  .sec,
-  .perkhidmatan-section,
-  .pengumuman-section,
-  .peta-section,
-  .faq-section {
-    padding: 20px;
-  } 
-}
-
-
-
 
 
