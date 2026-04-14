@@ -2025,12 +2025,17 @@ main {
 /* MENU LIST */
 #mobile-sidebar ul{
     list-style: none;
-    height: 100%;
+    padding: 15px 0;
+    margin: 0;
+
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 25px;
-    padding: 0 30px;
+
+    justify-content: flex-start;  /* ✅ MOVE TO TOP */
+    align-items: flex-start;
+
+    gap: 0;
 }
 
 /* LINKS */
