@@ -652,11 +652,13 @@ BORANG PAGE (DOWNLOAD FORMS)
     
 <script>
 const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.querySelector("#header ul");
+const navMenu = document.querySelector("#header nav");
 
 menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
+
+/* CLOSE WHEN CLICK OUTSIDE */
 document.addEventListener("click", (e) => {
     if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
         navMenu.classList.remove("active");
