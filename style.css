@@ -2008,120 +2008,70 @@ main {
     to { transform: scale(1); opacity: 1; }
 }
 
+
 /* =========================
-   MOBILE SIDEBAR NAV (FINAL FIX)
+   GLOBAL SIDEBAR (DESKTOP + MOBILE)
 ========================= */
-@media screen and (max-width: 768px){
 
-    /* HAMBURGER */
-    #menu-toggle{
-        display: block;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        font-size: 28px;
-        z-index: 100001;
-        cursor: pointer;
-    }
-
-    /* FORCE NAV INTO SIDEBAR */
-    #header nav{
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 75%;
-        height: 100vh;
-
-        background: rgba(0, 53, 73, 0.98);
-        backdrop-filter: blur(10px);
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        transition: 0.4s ease;
-        z-index: 100000;
-    }
-
-    /* SHOW SIDEBAR */
-    #header nav.active{
-        right: 0;
-    }
-
-    /* STACK MENU */
-    #header nav ul{
-        flex-direction: column !important;
-        gap: 25px;
-        padding: 0;
-    }
-
-    /* BIG TOUCH LINKS */
-    #header nav ul li a{
-        font-size: 1.4em;
-    }
-
-    /* OPTIONAL: HIDE DESKTOP NAV LOOK */
-    #header ul{
-        justify-content: center;
-    }
+/* HAMBURGER BUTTON */
+#menu-toggle{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    z-index: 100001;
+    cursor: pointer;
+    background: rgba(0,53,73,0.8);
+    padding: 10px 15px;
+    border-radius: 10px;
 }
 
-
-/* HIDE SIDEBAR ON DESKTOP */
+/* SIDEBAR */
 #mobile-sidebar{
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 260px;
+    height: 100vh;
+
+    background: rgba(0,53,73,0.98);
+    backdrop-filter: blur(10px);
+
+    transition: 0.4s ease;
+    z-index: 100000;
+
+    box-shadow: -5px 0 25px rgba(0,0,0,0.3);
 }
 
-/* MOBILE ONLY */
-@media screen and (max-width: 768px){
-
-    /* SHOW SIDEBAR SYSTEM */
-    #mobile-sidebar{
-        display: block;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 75%;
-        height: 100vh;
-
-        background: rgba(0,53,73,0.98);
-        backdrop-filter: blur(10px);
-
-        transition: 0.4s ease;
-        z-index: 100000;
-    }
-
-    #mobile-sidebar.active{
-        right: 0;
-    }
-
-    #mobile-sidebar ul{
-        list-style: none;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 25px;
-        padding: 0;
-    }
-
-    #mobile-sidebar ul li a{
-        color: white;
-        font-size: 1.4em;
-        text-decoration: none;
-    }
-
-    /* HAMBURGER */
-    #menu-toggle{
-        display: block;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        font-size: 28px;
-        z-index: 100001;
-        cursor: pointer;
-    }
+/* OPEN */
+#mobile-sidebar.active{
+    right: 0;
 }
 
+/* MENU LIST */
+#mobile-sidebar ul{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    padding: 0 30px;
+}
 
+/* LINKS */
+#mobile-sidebar ul li a{
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+#mobile-sidebar ul li a:hover{
+    background: #4faa2e;
+    color: #003549;
+    padding-left: 15px;
+}
