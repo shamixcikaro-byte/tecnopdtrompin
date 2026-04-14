@@ -28,6 +28,7 @@ body {
     background: #0a1a2f;
     margin: 0;
     padding: 0;
+
     overflow-x: hidden;
 }
 
@@ -820,6 +821,7 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: center;
+         position: relative;
     }
 
 
@@ -2033,20 +2035,12 @@ main {
 
 /* LINKS */
 #mobile-sidebar ul li a{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* ✅ left align content */
-
-    width: 100%;                /* IMPORTANT */
-    padding: 14px 20px;
     color: white;
+    font-size: 1.2em;
     text-decoration: none;
-    font-size: 1em;
-    transition: 0.2s;
-    text-align: left;           /* extra safety */
-}
-
-    
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
 /* HOVER EFFECT */
@@ -2129,7 +2123,7 @@ main {
     gap: 0;
     align-items: flex-start; 
 }
- 
+
 #mobile-sidebar ul li{
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
