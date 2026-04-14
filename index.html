@@ -46,6 +46,20 @@
       ☰
   </div>
 
+      
+  <!-- MOBILE SIDEBAR -->
+<div id="mobile-sidebar">
+    <ul>
+        <li><a href="#utama">Utama</a></li>
+        <li><a href="#perkhidmatan">Perkhidmatan</a></li>
+        <li><a href="#pengumuman">Pengumuman</a></li>
+        <li><a href="#peta">Peta</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#borang">Borang</a></li>
+        <li><a href="#footer">Hubungi</a></li>
+    </ul>
+</div>
+
   <nav>
     <ul>
       <li><a href="#utama">Utama</a></li>
@@ -649,19 +663,19 @@ BORANG PAGE (DOWNLOAD FORMS)
     </div>
 </div>
 
-    
+
 <script>
 const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.querySelector("#header nav");
+const sidebar = document.getElementById("mobile-sidebar");
 
 menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
+    sidebar.classList.toggle("active");
 });
 
 /* CLOSE WHEN CLICK OUTSIDE */
 document.addEventListener("click", (e) => {
-    if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
-        navMenu.classList.remove("active");
+    if (!menuToggle.contains(e.target) && !sidebar.contains(e.target)) {
+        sidebar.classList.remove("active");
     }
 });
 </script>
