@@ -1,216 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Explore the interactive Halloween Party project, showcasing responsive design, animations, and web development techniques.">
+<title>PDT Rompin</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/pdtrompin.jpg">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="animation.css">
 
-    <title>Pejabat Daerah dan Tanah Rompin</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animation.css">
-
-    <!-- ICON -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- OPEN GRAPH -->
-    <meta property="og:title" content="Parallax Scroll Site">
-    <meta property="og:description"
-        content="Explore the interactive Halloween Party project.">
-    <meta property="og:image" content="https://drive.google.com/uc?id=1GFbBHTi7w8weRVqLJ7bkofezEEGg4U30">
-    <meta property="og:type" content="website">
+<script defer src="action.js"></script>
 </head>
 
 <body>
 
-<!-- =======================
-HEADER
-======================= -->
 <header id="header">
 
     <div class="header-left">
-        <a href="#" class="logo">
-            <img src="images/logo3.png" alt="PDT Logo">
-        </a>
-        <div class="jabatan-name">
-            Pejabat Daerah dan Tanah Rompin
-        </div>
+        <img src="images/logo3.png" class="logo-img">
+        <div class="jabatan-name">Pejabat Daerah dan Tanah Rompin</div>
     </div>
 
-    <!-- MOBILE MENU -->
     <div id="menu-toggle">☰</div>
-    <div id="overlay"></div>
-
-    <aside id="mobile-sidebar">
-        <div class="sidebar-header">
-            <h3>MENU UTAMA</h3>
-            <p>Sistem Maklumat Rasmi</p>
-        </div>
-
-        <ul>
-            <li><a href="#utama">🏠 Utama</a></li>
-            <li><a href="#perkhidmatan">🛠️ Perkhidmatan</a></li>
-            <li><a href="#pengumuman">🔔 Pengumuman</a></li>
-            <li><a href="#peta">🗺 Peta</a></li>
-            <li><a href="#faq">💬 FAQ</a></li>
-            <li><a href="#borang">📝 Borang</a></li>
-            <li><a href="#footer">☏ Hubungi</a></li>
-        </ul>
-
-        <div class="sidebar-footer">
-            <p>© Sistem Rasmi Kerajaan</p>
-        </div>
-    </aside>
-
 </header>
 
-<!-- =======================
-PARALLAX SECTION
-======================= -->
-<section class="top-section" id="utama">
+<div id="overlay"></div>
 
-    <div class="sea-life">
-        <div class="bubbles">
-            <img src="images/sea/daun.png">
-            <img src="images/sea/daun.png">
-            <img src="images/sea/daun.png">
-        </div>
+<aside id="mobile-sidebar">
+    <div class="sidebar-header">
+        <h3>MENU UTAMA</h3>
     </div>
 
-    <img src="images/land/sky.png" id="sky" class="wallpaper">
-    <img src="images/land/sun.png" id="sun">
-    <img src="images/land/mountains.png" id="mountains" class="wallpaper">
+    <ul>
+        <li><a href="#utama">Utama</a></li>
+        <li><a href="#perkhidmatan">Perkhidmatan</a></li>
+        <li><a href="#pengumuman">Pengumuman</a></li>
+        <li><a href="#peta">Peta</a></li>
+        <li><a href="#faq">FAQ</a></li>
+    </ul>
+</aside>
+
+<!-- TOP -->
+<section class="top-section" id="utama">
+
+    <img src="images/land/sky.png" id="sky">
+    <img src="images/land/mountains.png" id="mountains">
     <img src="images/land/cloud.png" id="cloud">
 
-    <h1 id="text">
-        <span>Selamat Datang ke</span><br>
-        Pejabat Daerah dan Tanah Rompin
-    </h1>
+    <div id="text">
+        Selamat Datang<br>
+        <span>PDT Rompin</span>
+    </div>
 
     <p id="datetime"></p>
-    <p id="touch">Sila Sentuh Skrin Untuk Masuk ke Menu Utama</p>
-
-    <img src="images/land/waterfall.png" id="forest">
-    <img src="images/land/bird1.png" id="bird1">
-    <img src="images/land/bird2.png" id="bird2">
-
     <a href="#sec" id="explore">Lihat Maklumat</a>
 
 </section>
 
-<!-- =======================
-MAIN CONTENT
-======================= -->
-<main class="sec" id="sec">
+<!-- CONTENT -->
+<main id="sec">
 
-    <!-- VISI MISI -->
-    <section class="gov-section">
+<section id="perkhidmatan" class="section">
+    <h2>Perkhidmatan</h2>
+    <div class="card">Pengurusan Tanah</div>
+    <div class="card">Pentadbiran</div>
+</section>
 
-        <div class="gov-container">
+<section id="pengumuman" class="section">
+    <h2>Pengumuman</h2>
+    <div class="card">Pengumuman 1</div>
+</section>
 
-            <div class="gov-header">
-                <h2>VISI & MISI</h2>
-                <div class="gov-line"></div>
-            </div>
+<section id="peta" class="section">
 
-            <div class="gov-grid">
-
-                <div class="gov-card">
-                    <h3>VISI</h3>
-                    <p>
-                        Menjadikan Pejabat Daerah dan Tanah Rompin sebagai Peneraju
-                        Kecemerlangan Pentadbiran.
-                    </p>
-                </div>
-
-                <div class="gov-card">
-                    <h3>MISI</h3>
-                    <p>
-                        Memberikan perkhidmatan cemerlang, berkualiti dan berintegriti.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- PERKHIDMATAN -->
-    <section class="perkhidmatan-section" id="perkhidmatan">
-
-        <div class="gov-header">
-            <h2>PERKHIDMATAN</h2>
-            <div class="gov-line"></div>
-        </div>
-
-        <div class="perkhidmatan-grid">
-            <div class="perkhidmatan-card">Pengurusan Tanah</div>
-            <div class="perkhidmatan-card">Pembangunan Daerah</div>
-            <div class="perkhidmatan-card">Pentadbiran</div>
-        </div>
-
-    </section>
-
-    <!-- PENGUMUMAN -->
-    <section class="pengumuman-section" id="pengumuman">
-        <div class="gov-header">
-            <h2>PENGUMUMAN</h2>
-        </div>
-
-        <div class="pengumuman-grid">
-            <div class="pengumuman-card">Pengumuman 1</div>
-            <div class="pengumuman-card">Pengumuman 2</div>
-        </div>
-    </section>
-
-    <!-- PETA -->
-    <section class="peta-section" id="peta">
-
+    <div class="map-tools">
         <input id="mapSearch" placeholder="Cari lokasi">
         <button onclick="searchLocation()">Cari</button>
+    </div>
 
-        <iframe id="map"
-            src="https://www.google.com/maps?q=Rompin&output=embed"></iframe>
+    <iframe id="map"
+    src="https://www.google.com/maps?q=Rompin&output=embed"></iframe>
 
-        <div id="qrBox"></div>
+</section>
 
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq-section" id="faq">
-        <div class="faq-item">
-            <div class="faq-question">Soalan</div>
-            <div class="faq-answer">Jawapan</div>
-        </div>
-    </section>
-
-    <!-- BORANG -->
-    <section id="borang">
-        <div id="qrBoxBorang"></div>
-    </section>
+<section id="faq" class="section">
+    <div class="faq-item">
+        <div class="faq-question">Apa itu PDT Rompin?</div>
+        <div class="faq-answer">Pejabat Daerah dan Tanah Rompin.</div>
+    </div>
+</section>
 
 </main>
-
-<!-- =======================
-FOOTER
-======================= -->
-<footer id="footer">
-    <p>© 2026 PDT Rompin</p>
-</footer>
-
-<!-- =======================
-SCRIPT
-======================= -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="action.js"></script>
 
 </body>
 </html>
