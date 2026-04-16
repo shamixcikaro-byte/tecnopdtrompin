@@ -1,6 +1,4 @@
-// =======================
-// MENU
-// =======================
+// ================= SIDEBAR =================
 const menu = document.getElementById("menu-toggle");
 const sidebar = document.getElementById("mobile-sidebar");
 const overlay = document.getElementById("overlay");
@@ -15,36 +13,30 @@ overlay.onclick = () => {
     overlay.classList.remove("active");
 };
 
-// =======================
-// DATE TIME FIX
-// =======================
+// ================= DATE TIME =================
 function updateDateTime(){
     const now = new Date();
     document.getElementById("datetime").textContent =
-        now.toLocaleString('ms-MY');
+        now.toLocaleString("ms-MY");
 }
 setInterval(updateDateTime,1000);
 updateDateTime();
 
-// =======================
-// MAP SEARCH
-// =======================
+// ================= MAP =================
 function searchLocation(){
     const q = document.getElementById("mapSearch").value;
     document.getElementById("map").src =
         `https://www.google.com/maps?q=${q}&output=embed`;
 }
 
-// =======================
-// FAQ TOGGLE
-// =======================
+// ================= FAQ =================
 document.querySelectorAll(".faq-item").forEach(item=>{
-    item.onclick = () => item.classList.toggle("active");
+    item.addEventListener("click",()=>{
+        item.classList.toggle("active");
+    });
 });
 
-// =======================
-// IDLE RESET (FIXED)
-// =======================
+// ================= IDLE RESET (FIXED KIOSK LOGIC) =================
 let idle;
 
 function resetIdle(){
@@ -58,15 +50,17 @@ function resetIdle(){
     window.addEventListener(e,resetIdle);
 });
 
-// =======================
-// PARALLAX SIMPLE SAFE
-// =======================
+// ================= PARALLAX (ORIGINAL IDEA MAINTAINED) =================
 window.addEventListener("scroll",()=>{
-    let y = window.scrollY;
+    let value = window.scrollY;
 
+    const text = document.getElementById("text");
     const cloud = document.getElementById("cloud");
+    const sun = document.getElementById("sun");
     const mountains = document.getElementById("mountains");
 
-    if(cloud) cloud.style.transform = `translateX(${y*0.2}px)`;
-    if(mountains) mountains.style.transform = `translateY(${y*0.1}px)`;
+    if(text) text.style.top = 50 + value * -0.2 + "%";
+    if(cloud) cloud.style.left = value * 2 + "px";
+    if(sun) sun.style.top = value * 1 + "px";
+    if(mountains) mountains.style.top = value * 0.3 + "px";
 });
