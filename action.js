@@ -222,6 +222,19 @@ function generateQR() {
 let sections = ["peta", "pengumuman", "perkhidmatan", "sec"];
 let index = 0;
 
+setInterval(() => {
+    index = (index + 1) % sections.length;
+
+    const el = document.getElementById(sections[index]);
+
+    if (el) {
+        el.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+
+}, 20000); // slower = more kiosk-like
 
 const clickSound = new Audio("https://www.soundjay.com/buttons/sounds/button-16.mp3");
 
@@ -297,9 +310,6 @@ function generateBorangQR() {
     });
 }
 
-let autoScroll = true;
-
-const navLinks = document.querySelectorAll("nav ul li a");
 
 setInterval(() => {
 
@@ -381,4 +391,3 @@ function scrollPengumuman(direction) {
 
     container.style.transform = `translateX(${-pengumumanIndex * cardWidth}px)`;
 }
-
