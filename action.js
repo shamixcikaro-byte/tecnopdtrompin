@@ -297,6 +297,9 @@ function generateBorangQR() {
     });
 }
 
+let autoScroll = true;
+
+const navLinks = document.querySelectorAll("nav ul li a");
 
 setInterval(() => {
 
