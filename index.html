@@ -535,43 +535,205 @@ BORANG PAGE (DOWNLOAD FORMS)
     </div>
 
     <!-- GRID -->
-    <div class="borang-grid">
+    <div class="borang-scroll">
+   
 
-    <div class="borang-card">
+      <!-- 1 -->
+      <div class="borang-card">
+        <div class="borang-preview">
+          <img src="images/pdf.png" alt="PDF Preview">
+      </div>
+        <div class="borang-overlay">
+          <h3>Borang Aduan Kerosakan Bangunan Pejabat</h3>
+          <div class="borang-actions">
+            <button onclick="openPDF('pdf/Borang Aduan Kerosakan Bangunan Pejabat.pdf')">Lihat PDF</button>
+            <button onclick="generateBorangQR('pdf/Borang Aduan Kerosakan Bangunan Pejabat.pdf')">QR</button>
+          </div>
+          <div class="qr-box"></div>
+        </div>
+      </div>
 
-  <!-- PDF PREVIEW ICON / IMAGE -->
-  <div class="borang-preview">
-    <img src="images/forms/pdf-icon.png" alt="PDF">
-  </div>
+      <!-- 2 -->
+      <div class="borang-card">
+        <div class="borang-preview">
+          <img src="images/pdf.png" alt="PDF Preview">
+      </div>
+        <div class="borang-overlay">
+          <h3>Borang Aduan Kerosakan Peralatan ICT</h3>
+          <div class="borang-actions">
+            <button onclick="openPDF('pdf/Borang Aduan Kerosakan Peralatan ICT.pdf')">Lihat PDF</button>
+            <button onclick="generateBorangQR('pdf/Borang Aduan Kerosakan Peralatan ICT.pdf')">QR</button>
+          </div>
+          <div class="qr-box"></div>
+        </div>
+      </div>
 
-  <!-- CONTENT -->
-  <div class="borang-overlay">
-    <h3>Borang Permohonan Tanah (PDF)</h3>
+      <!-- 3 -->
+      <div class="borang-card">
+        <div class="borang-preview">
+          <img src="images/pdf.png" alt="PDF Preview">
+      </div>
+        <div class="borang-overlay">
+          <h3>Borang Aktiviti Laman Web</h3>
+          <div class="borang-actions">
+            <button onclick="openPDF('pdf/Borang Aktiviti Laman Web.pdf')">Lihat PDF</button>
+            <button onclick="generateBorangQR('pdf/Borang Aktiviti Laman Web.pdf')">QR</button>
+          </div>
+          <div class="qr-box"></div>
+        </div>
+      </div>
 
-    <div class="borang-actions">
+      <!-- 4 -->
+      <div class="borang-card">
+        <div class="borang-preview">
+          <img src="images/pdf.png" alt="PDF Preview">
+      </div>
+        <div class="borang-overlay">
+          <h3>Borang Akuan Terima Kunci</h3>
+          <div class="borang-actions">
+            <button onclick="openPDF('pdf/Borang Akuan Terima Kunci.pdf')">Lihat PDF</button>
+            <button onclick="generateBorangQR('pdf/Borang Akuan Terima Kunci.pdf')">QR</button>
+          </div>
+          <div class="qr-box"></div>
+        </div>
+      </div>
 
-  <button onclick="openPDF()">Lihat PDF</button>
+      <!-- 5 -->
+      <div class="borang-card">
+        <div class="borang-preview">
+          <img src="images/pdf.png" alt="PDF Preview">
+      </div>
+        <div class="borang-overlay">
+          <h3>Borang Insentif Pelajar Cemerlang PEDATAR</h3>
+          <div class="borang-actions">
+            <button onclick="openPDF('pdf/Borang Insetif Pelajar Cemerlang Pedatar.pdf')">Lihat PDF</button>
+            <button onclick="generateBorangQR('pdf/Borang Insetif Pelajar Cemerlang Pedatar.pdf')">QR</button>
+          </div>
+          <div class="qr-box"></div>
+        </div>
+      </div>
 
-<div id="pdfViewer"></div>
+      <!-- 6 -->
+      <div class="borang-card">
+        <div class="borang-preview">
+          <img src="images/pdf.png" alt="PDF Preview">
+      </div>
+        <div class="borang-overlay">
+          <h3>Borang Keluar Masuk Kuartes</h3>
+          <div class="borang-actions">
+            <button onclick="openPDF('pdf/Borang Keluar Masuk Kuartes.pdf')">Lihat PDF</button>
+            <button onclick="generateBorangQR('pdf/Borang Keluar Masuk Kuartes.pdf')">QR</button>
+          </div>
+          <div class="qr-box"></div>
+        </div>
+      </div>
 
-  <button onclick="generateBorangQR()">
-    📱 Papar QR Download
-  </button>
+      <!-- 7 -->
+      <div class="borang-card">
+        <div class="borang-preview">
+          <img src="images/pdf.png" alt="PDF Preview">
+      </div>
+        <div class="borang-overlay">
+          <h3>Borang Permohonan Bertugas Di Luar Pejabat</h3>
+          <div class="borang-actions">
+            <button onclick="openPDF('pdf/Borang Permohonan Bertugas Di Luar Pejabat.pdf')">Lihat PDF</button>
+            <button onclick="generateBorangQR('pdf/Borang Permohonan Bertugas Di Luar Pejabat.pdf')">QR</button>
+          </div>
+          <div class="qr-box"></div>
+        </div>
+      </div>
 
-</div>
+      <!-- 8 -->
+      <div class="borang-card">
+        <div class="borang-preview">
+          <img src="images/pdf.png" alt="PDF Preview">
+      </div>
+        <div class="borang-overlay">
+          <h3>Borang Permohonan Kenderaan Jabatan</h3>
+          <div class="borang-actions">
+            <button onclick="openPDF('pdf/Borang Permohonan Kenderaan Jabatan.pdf')">Lihat PDF</button>
+            <button onclick="generateBorangQR('pdf/Borang Permohonan Kenderaan Jabatan.pdf')">QR</button>
+          </div>
+          <div class="qr-box"></div>
+        </div>
+      </div>
 
-<!-- QR shown separately -->
-<div class="qr-box-container">
-  <div class="qr-box" id="qrBoxBorang"></div>
-</div>
-  </div>
+      <!-- 9 -->
+      <div class="borang-card">
+        <div class="borang-preview">
+          <img src="images/pdf.png" alt="PDF Preview">
+      </div>
+        <div class="borang-overlay">
+          <h3>Borang Permohonan Pinjaman Peralatan ICT</h3>
+          <div class="borang-actions">
+            <button onclick="openPDF('pdf/Borang Permohonan Pinjaman Peralatan ICT.pdf')">Lihat PDF</button>
+            <button onclick="generateBorangQR('pdf/Borang Permohonan Pinjaman Peralatan ICT.pdf')">QR</button>
+          </div>
+          <div class="qr-box"></div>
+        </div>
+      </div>
 
-</div>
+      <!-- 10 -->
+      <div class="borang-card">
+        <div class="borang-preview">
+          <img src="images/pdf.png" alt="PDF Preview">
+      </div>
+        <div class="borang-overlay">
+          <h3>Borang Pesanan Makanan</h3>
+          <div class="borang-actions">
+            <button onclick="openPDF('pdf/Borang Pesanan Makanan.pdf')">Lihat PDF</button>
+            <button onclick="generateBorangQR('pdf/Borang Pesanan Makanan.pdf')">QR</button>
+          </div>
+          <div class="qr-box"></div>
+        </div>
+      </div>
 
+      <!-- 11 -->
+      <div class="borang-card">
+       <div class="borang-preview">
+          <img src="images/pdf.png" alt="PDF Preview">
+      </div>
+        <div class="borang-overlay">
+          <h3>Brochure Bayar Cukai Rompin 2017</h3>
+          <div class="borang-actions">
+            <button onclick="openPDF('pdf/Brochure Bayar Cukai Pejabat Daerah Dan Tanah Rompin Tahun 2017.pdf')">Lihat PDF</button>
+            <button onclick="generateBorangQR('pdf/Brochure Bayar Cukai Pejabat Daerah Dan Tanah Rompin Tahun 2017.pdf')">QR</button>
+          </div>
+          <div class="qr-box"></div>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="borang-card">
+        <div class="borang-preview">
+          <img src="images/pdf.png" alt="PDF Preview">
+      </div>
+        <div class="borang-overlay">
+          <h3>Risalah Cukai Tanah Rompin</h3>
+          <div class="borang-actions">
+            <button onclick="openPDF('pdf/Risalah Cukai Tanah Pejabat Daerah Dan Tanah Rompin.pdf')">Lihat PDF</button>
+            <button onclick="generateBorangQR('pdf/Risalah Cukai Tanah Pejabat Daerah Dan Tanah Rompin.pdf')">QR</button>
+          </div>
+          <div class="qr-box"></div>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="borang-card">
+        <div class="borang-preview"></div>
+        <div class="borang-overlay">
+          <h3>Pewartaan Kadar Cukai</h3>
+          <div class="borang-actions">
+            <button onclick="openPDF('pdf/pewartaan-kadar-cukai.pdf')">Lihat PDF</button>
+            <button onclick="generateBorangQR('pdf/pewartaan-kadar-cukai.pdf')">QR</button>
+          </div>
+          <div class="qr-box"></div>
+        </div>
+      </div>
+
+    
     </div>
-
   </div>
-
 </section>
 </main>
 
@@ -707,6 +869,24 @@ window.addEventListener("scroll", () => {
     });
 });
 </script>
+<div id="pdfOverlay" class="pdf-overlay">
+
+    <div class="pdf-header">
+        <button class="pdf-close" onclick="closePDF()">✕</button>
+    </div>
+
+    <div id="pdfViewer" class="pdf-viewer"></div>
+
+</div>
+<!-- QR MODAL -->
+<div id="qrModal" class="qr-modal">
+    <div class="qr-modal-content">
+        <span class="qr-close" onclick="closeQRModal()">✖</span>
+        <h3>QR Code Borang</h3>
+        <div id="qrModalBox"></div>
+        <p style="margin-top:10px; font-size:14px;">Imbas untuk muat turun borang</p>
+    </div>
+</div>
 
 
 </body>
