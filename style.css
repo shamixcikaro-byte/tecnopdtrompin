@@ -1341,37 +1341,43 @@ transform:rotate(180deg);
     100% { transform: translateX(0); }
 }
 
+
+
+
+/* =========================
+   PENGUMUMAN FIXED + RESPONSIVE
+========================= */
+
 .pengumuman-section {
     background: #f5f7fa;
     padding: 70px 20px;
-    overflow: hidden;   /* IMPORTANT */
-
     width: 100%;
     min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     position: relative;
     scroll-snap-align: start;
+    overflow: hidden;
 }
 
 /* container */
 .pengumuman-container {
+    width: 100%;
     max-width: 1200px;
     margin: auto;
-    overflow: hidden;   /* IMPORTANT */
 }
-/* =========================
-   PENGUMUMAN RESPONSIVE FIX
-========================= */
 
+/* SCROLL WRAPPER */
 .pengumuman-grid-wrapper {
     width: 100%;
     overflow: hidden;
 }
 
-/* THIS is the main fix */
+/* MAIN CAROUSEL */
 .pengumuman-grid {
     display: flex;
     gap: 20px;
@@ -1383,36 +1389,34 @@ transform:rotate(180deg);
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
 
-    padding: 10px;
+    padding: 15px 5px;
 
     cursor: grab;
 }
 
+/* HIDE SCROLLBAR */
+.pengumuman-grid::-webkit-scrollbar {
+    display: none;
+}
 
-
+/* CARD */
 .pengumuman-card {
-    flex: 0 0 300px;   /* fixed slide width */
+    flex: 0 0 320px;
     scroll-snap-align: center;
 
     background: #fff;
-    border-radius: 10px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
-}
-@media (max-width: 768px) {
-    .pengumuman-card {
-        flex: 0 0 85%;
-    }
 
-    .pengumuman-grid {
-        gap: 12px;
-    }
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+
+    position: relative;
 }
 
 /* hover */
 .pengumuman-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 }
 
 /* IMAGE */
@@ -1435,7 +1439,7 @@ transform:rotate(180deg);
 }
 
 .pengumuman-content p {
-    font-size: 0.95em;
+    font-size: 0.9em;
     color: #444;
     line-height: 1.5em;
 }
@@ -1450,27 +1454,18 @@ transform:rotate(180deg);
     border-radius: 20px;
 }
 
-
-
-
-
-
-
-/* tablet + mobile fix */
-@media (max-width: 768px) {
-    .pengumuman-card {
-        flex: 0 0 85%;
-    }
-
-    .pengumuman-grid {
-        gap: 12px;
-    }
+/* overlay effect */
+.pengumuman-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,53,73,0.15), transparent);
+    opacity: 0;
+    transition: 0.3s;
 }
 
-@media (max-width: 480px) {
-    .pengumuman-card {
-        flex: 0 0 90%;
-    }
+.pengumuman-card:hover::after {
+    opacity: 1;
 }
 
 
@@ -2649,24 +2644,18 @@ BORANG SCROLL UPGRADE (ADD HERE)
     from { transform: scale(0.7); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
-
-/* =========================
-   PENGUMUMAN MOBILE FIX
-========================= */
-
 @media (max-width: 768px) {
 
     .pengumuman-section {
         padding: 50px 15px;
     }
 
-    .pengumuman-container {
-        width: 100%;
-        padding: 0 10px;
+    .pengumuman-card {
+        flex: 0 0 85%;   /* ONE CARD VIEW */
     }
 
-    .pengumuman-card {
-        flex: 0 0 85%;   /* show 1 card per swipe view */
+    .pengumuman-card img {
+        height: 150px;
     }
 
     .pengumuman-content h3 {
@@ -2674,12 +2663,43 @@ BORANG SCROLL UPGRADE (ADD HERE)
     }
 
     .pengumuman-content p {
-        font-size: 0.9em;
+        font-size: 0.88em;
     }
 
-    .pengumuman-card img {
-        height: 140px;
+    .pengumuman-grid {
+        gap: 12px;
+        padding: 10px;
     }
+}
+
+.pengumuman-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.pengumuman-controls button {
+    background: linear-gradient(135deg, #0b5e8e, #4faa2e);
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+.pengumuman-controls button:hover {
+    background: #003549;
+    transform: scale(1.1);
 }
 
 
