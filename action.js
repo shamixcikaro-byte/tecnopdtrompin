@@ -18,6 +18,7 @@ const forest = document.getElementById("forest");
 const mountains = document.getElementById("mountains");
 
 // OPTIONAL elements (avoid errors if not exist)
+
 const splash = document.getElementById("splash");
 const fish1 = document.getElementById("fish1");
 const fish2 = document.getElementById("fish2");
@@ -503,5 +504,26 @@ function loadPDFPreview() {
 window.onload = function () {
     loadPDFPreview();
 };
+
+const pengumumanGrid = document.querySelector(".pengumuman-grid");
+const pengumumanCard = document.querySelector(".pengumuman-card");
+
+function getPengumumanScroll() {
+    return pengumumanCard.offsetWidth + 20; // card + gap
+}
+
+function nextPengumuman() {
+    pengumumanGrid.scrollBy({
+        left: getPengumumanScroll(),
+        behavior: "smooth"
+    });
+}
+
+function prevPengumuman() {
+    pengumumanGrid.scrollBy({
+        left: -getPengumumanScroll(),
+        behavior: "smooth"
+    });
+}
 
 
