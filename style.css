@@ -1890,74 +1890,6 @@ transform:rotate(180deg);
     transform: scale(0.98);
 }
 
-/* BORANG CARD KIOSK STYLE */
-.borang-card{
-    position: relative;
-    border-radius: 18px;
-    overflow: hidden;
-    background: white;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-    transition: 0.3s;
-}
-
-.borang-card:hover{
-    transform: translateY(-8px);
-}
-
-/* PDF ICON AREA */
-.borang-preview{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 280px;
-    background: linear-gradient(135deg, #f5f7fa, #e1e8ef);
-}
-
-.borang-preview img{
-    width: 90px;
-    opacity: 0.8;
-}
-
-/* OVERLAY */
-.borang-overlay{
-    padding: 20px;
-    background: white;
-}
-
-.borang-overlay h3{
-    color: #003549;
-    font-size: 1.05em;
-    margin-bottom: 12px;
-}
-
-/* BUTTONS */
-.borang-actions{
-    display: flex;
-    gap: 10px;
-}
-
-.borang-actions a{
-    flex: 1;
-    text-align: center;
-    padding: 10px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9em;
-    transition: 0.3s;
-    color: white;
-    background: linear-gradient(135deg, #0b5e8e, #4faa2e);
-}
-
-.borang-actions a:hover{
-    transform: scale(1.05);
-    background: #003549;
-}
-
-
-
-
-
 
 
 nav ul li a {
@@ -2255,6 +2187,416 @@ main {
                 0 25px 60px rgba(0,53,73,0.25);
     transform: scale(1.06);
     transition: 0.3s ease;
+}
+
+
+#borang {
+    scroll-snap-align: start;
+}
+
+* {
+    outline: 1px solid red;
+}
+
+/* =========================
+   BORANG CARD (UPGRADED)
+========================= */
+.borang-card{
+    min-width: 280px;
+    max-width: 300px;
+    flex: 0 0 auto;
+
+    background: #ffffff;
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+
+    transition: 0.2s ease;
+}
+
+.borang-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+    
+
+/* subtle top highlight line */
+.borang-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #0b5e8e, #4faa2e);
+}
+
+/* =========================
+   PREVIEW AREA
+========================= */
+.borang-preview{
+    height: 180px;
+     width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #f1f5f9;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* PDF ICON */
+.borang-preview img{
+    width: 60px;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* IMPORTANT */
+    display: block;
+}
+
+
+/* small label under icon */
+.borang-preview span{
+    font-size: 0.75em;
+    color: #64748b;
+}
+/* =========================
+   CONTENT AREA
+========================= */
+.borang-overlay{
+    padding: 16px;
+}
+
+.borang-overlay h3{
+    font-size: 1em;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.borang-overlay p{
+    font-size: 0.85em;
+    color: #64748b;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+/* =========================
+   BUTTONS (IMPROVED)
+========================= */
+/* BUTTON CONTAINER */
+/* BUTTON CONTAINER */
+
+.borang-actions{
+    display: flex;
+    gap: 8px;
+}
+
+/* base */
+.borang-actions a{
+    flex: 1;
+    text-align: center;
+
+    padding: 8px 10px;
+    border-radius: 6px;
+
+    font-size: 0.8em;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    border: 1px solid #cbd5e1;
+    background: white;
+    color: #0f172a;
+
+    transition: 0.2s ease;
+}
+
+/* view */
+.borang-actions a.view{
+    border-color: #0b5e8e;
+    color: #0b5e8e;
+}
+
+/* download */
+.borang-actions a.download{
+    border-color: #16a34a;
+    color: #16a34a;
+}
+
+/* qr */
+.borang-actions a.qr{
+    border-color: #7c3aed;
+    color: #7c3aed;
+}
+
+/* hover (clean, no glow) */
+.borang-actions a:hover{
+    background: #0b5e8e;
+    color: white;
+    border-color: #0b5e8e;
+}
+
+
+
+
+
+
+
+
+/* =========================
+   GRID (IF YOU USE MULTIPLE CARDS)
+========================= */
+
+/* MATCH PETA BUTTON STYLE */
+.borang-actions button {
+    background: linear-gradient(135deg, #0b5e8e, #4faa2e);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* HOVER (same as peta) */
+.borang-actions button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* CLICK EFFECT */
+.borang-actions button:active {
+    transform: scale(0.97);
+}
+
+/* SHINE EFFECT */
+.borang-actions button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.25);
+    transform: skewX(-25deg);
+}
+
+/* TRIGGER SHINE */
+.borang-actions button:hover::after {
+    animation: shine 0.8s ease;
+}
+
+/* SAME ANIMATION */
+@keyframes shine {
+    100% {
+        left: 200%;
+    }
+}
+
+/* =========================
+BORANG SCROLL UPGRADE (ADD HERE)
+========================= */
+
+/* Make section behave like kiosk screen */
+.borang-section{
+    background: #f4f6f9;
+    padding: 80px 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Allow container to stretch */
+.borang-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* SCROLL AREA */
+.borang-scroll{
+    display: flex;
+    gap: 24px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 10px 5px 25px;
+
+    scroll-snap-type: x mandatory;
+}
+
+/* Smooth scrollbar */
+.borang-scroll::-webkit-scrollbar{
+    width: 6px;
+}
+.borang-scroll::-webkit-scrollbar-thumb{
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+.borang-scroll::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+/* FULLSCREEN OVERLAY */
+.pdf-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    z-index: 99999;
+
+    display: none;
+    flex-direction: column;
+}
+
+/* HEADER BAR */
+.pdf-header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 15px;
+}
+
+
+
+/* PDF CONTAINER */
+.pdf-viewer{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+
+/* IFRAME FULLSCREEN FIX */
+.pdf-viewer iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.pdf-close{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ff2e2e;
+    color: white;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+    z-index: 999999;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pdf-close:hover{
+    background: #cc0000;
+    transform: scale(1.1);
+}
+
+#pdfPreview canvas {
+    width: 100%;
+    transition: 0.3s ease;
+    border-radius: 10px;
+}
+
+#pdfPreview:hover canvas {
+    transform: scale(1.05);
+}
+
+/* QR MODAL BACKDROP */
+.qr-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    justify-content: center;
+    align-items: center;
+}
+
+/* BOX */
+.qr-modal-content {
+    position: relative; /* IMPORTANT for absolute button */
+}
+
+.qr-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+
+    background: #ff2e2e !important;
+    color: #ffffff !important;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    z-index: 10000;
+
+    border: none;
+}
+/* hover effect */
+.qr-close:hover {
+    background: #ff4d4d;
+    color: white;
+}
+
+/* QR BOX */
+#qrModalBox {
+    margin-top: 15px;
+}
+
+/* ANIMATION */
+@keyframes pop {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 
