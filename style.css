@@ -1373,8 +1373,10 @@ transform:rotate(180deg);
 
 .pengumuman-grid {
     display: flex;
-    flex-wrap: nowrap;
     gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
 }
 
 
@@ -1385,7 +1387,6 @@ transform:rotate(180deg);
 
 /* EACH CARD = 50% WIDTH (2 per view) */
 .pengumuman-card {
-    flex: 0 0 calc(50% - 10px);
     background: #ffffff;
     border-radius: 8px;
     overflow: hidden;
@@ -1394,12 +1395,30 @@ transform:rotate(180deg);
 
     scroll-snap-align: start;
     position: relative;
+     flex: 0 0 50%;
 }
 
 /* hover effect */
 .pengumuman-card:hover {
     transform: scale(1.03);
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* tablet + mobile fix */
+@media (max-width: 768px) {
+    .pengumuman-card {
+        flex: 0 0 85%;
+    }
+
+    .pengumuman-grid {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pengumuman-card {
+        flex: 0 0 90%;
+    }
 }
 
 
